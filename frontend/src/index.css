@@ -1,0 +1,145 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-base:        #09090b;
+  --bg-surface:     #0f0f12;
+  --bg-elevated:    #141418;
+  --bg-hover:       #1c1c22;
+  --bg-active:      #21212a;
+  --bg-input:       #16161c;
+
+  --border:         rgba(255,255,255,0.06);
+  --border-md:      rgba(255,255,255,0.09);
+  --border-strong:  rgba(255,255,255,0.14);
+
+  --text-primary:   #f1f0f5;
+  --text-secondary: #8b8a9a;
+  --text-muted:     #4a4a5a;
+  --text-faint:     #2e2e3a;
+
+  --accent:         #7c6af7;
+  --accent-hover:   #6d5de8;
+  --accent-muted:   rgba(124,106,247,0.12);
+  --accent-border:  rgba(124,106,247,0.3);
+  --accent-text:    #a99ffe;
+
+  --green:          #34d399;
+  --green-dim:      rgba(52,211,153,0.1);
+  --amber:          #fbbf24;
+  --amber-dim:      rgba(251,191,36,0.1);
+  --red:            #f87171;
+  --red-dim:        rgba(248,113,113,0.08);
+
+  --sidebar-w:      240px;
+  --radius-sm:      5px;
+  --radius-md:      8px;
+  --radius-lg:      12px;
+  --radius-xl:      16px;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: var(--bg-base);
+  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar { width: 3px; height: 3px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.08); border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.14); }
+
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+input, textarea { font-family: inherit; }
+input::placeholder, textarea::placeholder { color: var(--text-muted); }
+
+.md-body { font-size: 13.5px; line-height: 1.75; color: var(--text-primary); }
+.md-body p { margin: 0 0 10px; }
+.md-body p:last-child { margin: 0; }
+.md-body ul, .md-body ol { padding-left: 20px; margin: 0 0 10px; }
+.md-body li { margin-bottom: 4px; }
+.md-body li:last-child { margin-bottom: 0; }
+.md-body strong { color: var(--text-primary); font-weight: 600; }
+.md-body em { color: var(--text-secondary); }
+.md-body h1, .md-body h2, .md-body h3 {
+  color: var(--text-primary);
+  font-weight: 600;
+  margin: 16px 0 6px;
+  line-height: 1.3;
+}
+.md-body h1 { font-size: 16px; }
+.md-body h2 { font-size: 14px; }
+.md-body h3 { font-size: 13px; }
+.md-body code {
+  background: rgba(124,106,247,0.1);
+  color: var(--accent-text);
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Menlo', monospace;
+  border: 1px solid var(--accent-border);
+}
+.md-body pre {
+  background: #0d0d10;
+  border: 1px solid var(--border-md);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  overflow-x: auto;
+  margin: 10px 0;
+}
+.md-body pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #c9c2ff;
+  font-size: 12px;
+}
+.md-body blockquote {
+  border-left: 2px solid var(--accent);
+  padding-left: 14px;
+  color: var(--text-secondary);
+  margin: 10px 0;
+}
+.md-body a { color: var(--accent-text); text-decoration: none; }
+.md-body a:hover { text-decoration: underline; }
+.md-body hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 14px 0;
+}
+.md-body table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 12.5px; }
+.md-body th {
+  background: var(--bg-hover);
+  color: var(--text-secondary);
+  font-weight: 500;
+  text-align: left;
+  padding: 7px 10px;
+  border: 1px solid var(--border);
+}
+.md-body td {
+  padding: 7px 10px;
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes bounce {
+  0%, 80%, 100% { transform: translateY(0); opacity: 0.3; }
+  40% { transform: translateY(-4px); opacity: 1; }
+}
+@keyframes pulse { 0%, 100% { opacity: 0.4; } 50% { opacity: 1; } }
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
