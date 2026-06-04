@@ -4,8 +4,15 @@
 
 Quill is a full-stack Retrieval-Augmented Generation (RAG) application that lets you have intelligent conversations with your documents. It retrieves the most relevant passages from your uploaded PDFs and uses GPT-4o mini to generate accurate, cited answers — never hallucinating beyond what your documents actually say.
 
+## Screenshots
 
----
+### Upload and chat with your documents
+<img width="1919" height="861" alt="image" src="https://github.com/user-attachments/assets/187c4435-b079-40fe-9695-6f5e9d7383bb" />
+
+### Grounded answers with citations
+<img width="1918" height="869" alt="image" src="https://github.com/user-attachments/assets/5bcd619c-203b-4fc9-aa24-600662fe95d1" />
+<img width="1919" height="870" alt="image" src="https://github.com/user-attachments/assets/0c250846-0bc1-496c-aa1c-e41d59312cd4" />
+
 
 ## Features
 
